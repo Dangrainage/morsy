@@ -7,5 +7,5 @@ send me morse code
 If you for some reason want to send me an Individual letter.. I guess more power to you, there's a function for that too.
 You can run `bash morsy.sh send_letter <your_letter>` and It will be sent.
 
-# Also... only lowercase letters are allowed...
--# for now
+# Also... only lowercase letters are allowed... <sub><sup>for now</sup></sub>
+
