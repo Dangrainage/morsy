@@ -1,13 +1,13 @@
 dit() {                          # This is a definition of dit, the sleep is how long It lasts       
-        curl https://lampy.dangrain.top/H 
+        curl -s  https://lampy.dangrain.top/H > /dev/null
         sleep 0.1 
-        curl https://lampy.dangrain.top/L 
+        curl -s  https://lampy.dangrain.top/L > /dev/null
 }
 
 dah() {  # same as abvoe just for dah 
-        curl https://lampy.dangrain.top/H 
+        curl -s  https://lampy.dangrain.top/H > /dev/null
         sleep 0.3
-        curl https://lampy.dangrain.top/L 
+        curl -s  https://lampy.dangrain.top/L > /dev/null 
 }
 
 space() {
@@ -79,7 +79,7 @@ if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
     echo "Input your text. Lowercase only"
 
     read inputted_text
-    curl https://lampy.dangrain.top/L # we ensure Lampy's off before sending
+    curl -s  https://lampy.dangrain.top/L > /dev/null # we ensure Lampy's off before sending
     my_string="${inputted_text}"
 
     char_array=() 
@@ -88,9 +88,10 @@ if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
         char_array+=("${my_string:$i:1}") # go through the string picking out letters and putting them into char_array
     done
 
-
+	echo "Transmitting..."
     for char in "${char_array[@]}"; do
         send_letter "$char"  # this is where we actually send the characters
 	sleep 0.1 # delay between parts of the same letter
     done
+	echo "All done!"
 fi
