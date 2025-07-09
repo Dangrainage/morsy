@@ -11,7 +11,7 @@ dah() {  # same as abvoe just for dah
 }
 
 space() {
-        sleep 0.1  # space :)
+        sleep 0.3  # space :)
 }
 
 
@@ -91,5 +91,6 @@ if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
 
     for char in "${char_array[@]}"; do
         send_letter "$char"  # this is where we actually send the characters
+	sleep 0.1 # delay between parts of the same letter
     done
 fi
