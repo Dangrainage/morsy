@@ -52,7 +52,32 @@ morse[7]="--..."
 morse[8]="---.."
 morse[9]="----."
 morse[0]="-----"
-
+morse[A]=".-"
+morse[B]="-..."
+morse[C]="-.-."
+morse[D]="-.."
+morse[E]="."
+morse[F]="..-."
+morse[G]="--."
+morse[H]="...."
+morse[I]=".."
+morse[J]=".---"
+morse[K]="-.-"
+morse[L]=".-.."
+morse[M]="--"
+morse[N]="-."
+morse[O]="---"
+morse[P]=".--."
+morse[Q]="--.-"
+morse[R]=".-."
+morse[S]="..."
+morse[T]="-"
+morse[U]="..-"
+morse[V]="...-"
+morse[W]=".--"
+morse[X]="-..-"
+morse[Y]="-.--"
+morse[Z]="--.."
 
 
 send_letter() { # function that sends the letters (calls dit and dah)
@@ -76,7 +101,7 @@ if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
         exit 0
     fi
 
-    echo "Input your text. Lowercase only"
+    echo "Input your text."
 
     read inputted_text
     curl -s  https://lampy.dangrain.top/L > /dev/null # we ensure Lampy's off before sending
